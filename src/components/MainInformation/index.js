@@ -1,5 +1,4 @@
 import { Typography, Stack } from '@mui/material';
-// import { Stack } from '@mui/system';
 import React from 'react';
 
 const MainInformation = (props) => {
@@ -11,16 +10,22 @@ const MainInformation = (props) => {
         } = userState;
   return (
     <>
-    <Stack>
-        <Typography>
+    <Stack direction="row"
+        sx={{
+            justifyContent: 'space-between'
+        }}>
+        <Typography
+        variant='h4'>
             {name}
         </Typography>
-        <Typography>
+        <Typography
+        variant='subtitle2'>
             {created_at}
         </Typography>
     </Stack>
-        <Typography>
-            {login}
+        <Typography
+        variant='caption'>
+            {`@${login}`}
         </Typography>
     </>
   )

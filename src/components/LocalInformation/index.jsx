@@ -14,9 +14,13 @@ const LocalInformation = (props) => {
         company
     } = userState;
   return (
-    <Grid container>
+    <Grid container
+    spacing={2}
+    sx={{
+        marginTop: '15px'
+    }}>
         <Grid item xs={6}>
-            <Stack>
+            <Stack direction='row' spacing={2}>
             <LocationOnIcon/>
             {
                 location != null
@@ -26,7 +30,7 @@ const LocalInformation = (props) => {
             </Stack>
         </Grid>
         <Grid item xs={6}>
-        <Stack>
+        <Stack direction='row' spacing={2}>
             <TwitterIcon/>
             {twitter_username != null
                 ? <Typography>{`@${twitter_username}`}</Typography>
@@ -35,16 +39,16 @@ const LocalInformation = (props) => {
         </Stack>
         </Grid>
         <Grid item xs={6}>
-        <Stack>
+        <Stack direction='row' spacing={2}>
             <LanguageIcon/>
             {blog != ''
-                ? <Typography>{blog}</Typography>
+                ? <a target='_blank' href={blog}><Typography>{blog}</Typography></a>
                 : <Typography>Not avaiable</Typography>
             }
         </Stack>
         </Grid>
         <Grid item xs={6}>
-        <Stack>
+        <Stack direction='row' spacing={2}>
             <BusinessIcon/>
             {company != null
                 ? <Typography>{company}</Typography>
