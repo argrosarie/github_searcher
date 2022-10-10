@@ -14,7 +14,6 @@ const Searcher = (props) => {
     const onSearchValueChange = (event) => {
         const inputValue = event.target.value
         setValueInput(inputValue)
-        // console.log('this is inputValue', inputValue) 
     };
     
     const handleSubmit = () => {

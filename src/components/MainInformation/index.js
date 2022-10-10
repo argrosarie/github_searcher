@@ -8,6 +8,9 @@ const MainInformation = (props) => {
         login, 
         created_at
         } = userState;
+    const isoDate = created_at;
+    const theFirstLogin = new Date(isoDate);
+    const firstLogin = theFirstLogin.toLocaleDateString('es-AR');
   return (
     <>
     <Stack direction="row"
@@ -20,7 +23,7 @@ const MainInformation = (props) => {
         </Typography>
         <Typography
         variant='subtitle2'>
-            {created_at}
+            First login: {firstLogin}
         </Typography>
     </Stack>
         <Typography
