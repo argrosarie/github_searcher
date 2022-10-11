@@ -6,6 +6,7 @@ import { useEffect } from "react";
 import { getGithubUser } from './services/users';
 import UserCard from "./containers/UserCard";
 
+
 const App = () => {
 
     const [inputUser, setInputUser] = useState('argrosarie');
@@ -37,6 +38,7 @@ const App = () => {
     return(
         <Container sx={{
             background: 'whitesmoke',
+            backgroundColor: "#47667b",
             width: '80vw',
             height: '500px',
             borderRadius: '16px',

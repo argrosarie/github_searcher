@@ -2,6 +2,28 @@ import React from 'react';
 import { Stack, TextField, IconButton } from '@mui/material';
 import SearchIcon from '@mui/icons-material/Search';
 import { useState } from 'react';
+import { alpha, styled } from '@mui/material/styles';
+
+const CssTextField = styled(TextField)({
+    '& label.Mui-focused': {
+      color: '#d5e0b5',
+    },
+    '& .MuiInput-underline:after': {
+      borderBottomColor: '#6d8b89',
+    },
+    '& .MuiOutlinedInput-root': {
+      '& fieldset': {
+        borderColor: ' #a5c3a7 ',
+      },
+      '&:hover fieldset': {
+        borderColor: '#d5e0b5',
+      },
+      '&.Mui-focused fieldset': {
+        borderColor: '#d5e0b5',
+      },
+    },
+  });
+
 
 const Searcher = (props) => {
 
@@ -27,24 +49,27 @@ const Searcher = (props) => {
         marginTop: '30px',
         width: '80%'
     }}>
-        <TextField
-        id='outlined-basic'
-        label='Github User'
+        <CssTextField  id="custom-css-outlined-input"
+       
         placeholder='Search user'
         variant='outlined'
         size='small'
         value={valueInput}
         onChange={onSearchValueChange}
+        inputProps={{sx:{color:"#6d8b89",
+    }}}
         sx={{
-            width: '90%'
-        }}>
+            width: '90%',
+            backgroundColor: "#d5e0b5",
+            color: "#47667b",
+        }}/>
 
-        </TextField>
+
         <IconButton
         onClick={handleSubmit}
         sx={{
             left: '-45px',
-
+            color: "#47667b"
         }}
         >
             <SearchIcon/>

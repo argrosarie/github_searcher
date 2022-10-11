@@ -9,12 +9,15 @@ following
  } = userState;
   return (
     <>
-        <Paper elevation={3}>
+        <Paper elevation={3}
+        sx={{backgroundColor: "#a5c3a7"}}
+        >
             <Stack
             spacing={3} direction='row'
             sx={{
                 justifyContent: 'space-evenly',
-                margin:'20px'
+                margin:'20px',
+                color: "#47667b"
             }}
             >
                 <Stack>

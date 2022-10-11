@@ -10,7 +10,8 @@ const MainDescription = (props) => {
     <>
     <Stack
     sx={{
-      justifyContent: 'center'
+      justifyContent: 'center',
+      color: "#d5e0b5"
     }}>
         {
           bio !== null

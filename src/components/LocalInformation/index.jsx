@@ -17,7 +17,8 @@ const LocalInformation = (props) => {
     <Grid container
     spacing={2}
     sx={{
-        marginTop: '15px'
+        marginTop: '15px',
+        color: "#d5e0b5"
     }}>
         <Grid item xs={6}>
             <Stack direction='row' spacing={2}>

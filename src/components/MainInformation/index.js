@@ -15,18 +15,21 @@ const MainInformation = (props) => {
     <>
     <Stack direction="row"
         sx={{
-            justifyContent: 'space-between'
+            justifyContent: 'space-between',
+            color: "#d5e0b5",
         }}>
         <Typography
-        variant='h4'>
+        variant='h4'
+        >
             {name}
         </Typography>
         <Typography
-        variant='subtitle2'>
+        variant='body1'
+        >
             First login: {firstLogin}
         </Typography>
     </Stack>
-        <Typography
+        <Typography sx={{ color: "#d5e0b5"}}
         variant='caption'>
             {`@${login}`}
         </Typography>
