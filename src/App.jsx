@@ -37,12 +37,11 @@ const App = () => {
 
     return(
         <Container sx={{
-            background: 'whitesmoke',
             backgroundColor: "#47667b",
             width: '80vw',
             height: '500px',
             borderRadius: '16px',
-            marginTop: '40px',
+            marginTop: '10px',
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center'

@@ -7,9 +7,13 @@ const PaperInformation = (props) => {
     followers,
 following
  } = userState;
+
+ const responsiveCustom = {
+ }
   return (
     <>
-        <Paper elevation={3}
+        <Paper
+         elevation={3}
         sx={{backgroundColor: "#a5c3a7"}}
         >
             <Stack

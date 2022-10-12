@@ -6,11 +6,23 @@ import MainDescription from '../../containers/MainDescription/index';
 const UserCard = (props) => {
   const { userState } = props;
   const { avatar_url } = userState;
+
+  const responsiveCustom = {
+    display: 'flex',
+    marginTop:'15px',
+    flexDirection: {
+      sx: 'column',
+      md: 'row-reverse',
+      lg: 'column-reverse'
+    }
+  }
   return (
     <Grid 
       container 
-      spacing={2}
-      sx={{marginTop:'15px'}}>
+      // spacing={2}
+      sx={responsiveCustom}
+      // sx={{marginTop:'15px'}}
+      >
         <Grid item xs={3}>
           <CardMedia
           component='img'

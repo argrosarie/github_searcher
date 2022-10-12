@@ -13,6 +13,9 @@ const LocalInformation = (props) => {
         blog,
         company
     } = userState;
+
+  
+   
   return (
     <Grid container
     spacing={2}

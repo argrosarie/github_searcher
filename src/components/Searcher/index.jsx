@@ -42,15 +42,21 @@ const Searcher = (props) => {
       setInputUser(valueInput);
      
     };
+
+    const responsiveCustom = {
+      width: "98%",
+      marginTop: '30px'
+    }
     return (
     <Stack
     direction='row'
-     sx={{
-        marginTop: '30px',
-        width: '80%'
-    }}>
+    //  sx={{
+    //     marginTop: '30px',
+    //     width: '90%'
+    // }}
+    sx={responsiveCustom}
+    >
         <CssTextField  id="custom-css-outlined-input"
-       
         placeholder='Search user'
         variant='outlined'
         size='small'
