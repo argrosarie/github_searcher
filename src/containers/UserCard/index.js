@@ -1,4 +1,4 @@
-import { Grid,CardMedia, Stack } from '@mui/material';
+import { Grid,CardMedia, Stack, Box } from '@mui/material';
 import React from 'react'
 import MainInformation from '../../components/MainInformation/index';
 import MainDescription from '../../containers/MainDescription/index';
@@ -11,19 +11,26 @@ const UserCard = (props) => {
     display: 'flex',
     marginTop:'15px',
     flexDirection: {
-      sx: 'column',
-      md: 'row-reverse',
-      lg: 'column-reverse'
+      //xs: 'column',
+      // md: 'row-reverse',
+      // lg: 'column-reverse'
     }
+  
   }
+ 
   return (
-    <Grid 
-      container 
-      // spacing={2}
-      sx={responsiveCustom}
+    <Stack 
+    variant="div"
+      // container 
+     // spacing={2}
+      // columns={{ xs: 12 }}
+       sx={responsiveCustom}
       // sx={{marginTop:'15px'}}
       >
-        <Grid item xs={3}>
+        <Stack
+        //  item 
+       // xs={3}
+        >
           <CardMedia
           component='img'
           alt='GitHub User'
@@ -31,24 +38,26 @@ const UserCard = (props) => {
           sx={
             {
               borderRadius: '50%',
-              marginLeft: '5px'
+              marginLeft: '5px',
             }
           }
            />
-        </Grid>
-        <Grid item xs={9}>
+        </Stack>
+        <Stack
+        //  item xs={9}
+         >
           <Stack
           direction="column"
           spacing={1}
           sx={{
-            margin: '30'
+            margin: '30px'
           }}>
             <MainInformation userState={userState} />
             <MainDescription userState={userState}/>
           </Stack>
-        </Grid>
+        </Stack>
 
-    </Grid>
+    </Stack>
   )
 }
 

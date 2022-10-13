@@ -13,7 +13,7 @@ const MainInformation = (props) => {
     const firstLogin = theFirstLogin.toLocaleDateString('es-AR');
   return (
     <>
-    <Stack direction="row"
+    <Stack direction="column"
         sx={{
             justifyContent: 'space-between',
             color: "#d5e0b5",
